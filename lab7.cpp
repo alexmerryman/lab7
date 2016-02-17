@@ -70,7 +70,7 @@ short greater_val(short * ptrA, short * ptrB)
         cout << b;
     }
     else {
-        cout << "They are equal";
+        cout << "The values are equal";
     }
 }
 
