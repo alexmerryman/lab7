@@ -19,7 +19,7 @@ int main()
 
 
     //pointer_fun(6,3);
-    //greater_val(...)
+    //greater_val(...);
     //pointer_arithmetic_chars();
 
 }
@@ -28,11 +28,17 @@ int main()
  * Prints to terminal the values of the ints at the pointers. Then, prints to terminal the value of the ints at the pointer locations.*/
 void pointer_fun(int a, int b)
 {
-    //your code here
+    int * ptrA = &a;
+    int * ptrB = &b;
 
+    cout << "\nFUNCTION pointer_fun:\n";
+    cout << *ptrA << "\n";
+    cout << *ptrB << "\n";
+    cout << ptrA << "\n";
+    cout << ptrB << "\n";
 
     //follow-up question; how far away, in bytes, is location of ptrA versus location of ptrB? How many bytes is an int stored in?
-    //cout << "\n Int size (bytes): "<< sizeof(a) << endl;
+    cout << "\n Int size (bytes): "<< sizeof(a) << endl;
 
 }
 
@@ -45,22 +51,27 @@ void pointer_arithmetic_chars()
 
     for(int i=0; i<length; i++)
     {
-        //your code here:
-
-            //print to terminal each letter in char[] by dereferencing pc
-
-            //increment pointer
-
-
+        *pc = course[i];
+        cout << *(pc + i);
     }
 }
 
 short greater_val(short * ptrA, short * ptrB)
 {
-    //your code here
+    short a = *ptrA;
+    short b = *ptrB;
 
-
-    return 0; // <--- change this
+    if (a > b) {
+        //return a;
+        cout << a;
+    }
+    else if (b > a) {
+        //return b;
+        cout << b;
+    }
+    else {
+        cout << "They are equal";
+    }
 }
 
 /* prints out pointer location in hex, decimal, and binary */
